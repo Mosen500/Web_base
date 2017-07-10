@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<mata charset="utf-8"/>
+		<title>date时间对象</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var today = new Date(),
+				year = today.getFullYear(),
+				date = today.getDate(),
+				month = today.getMonth()+1,
+				week = today.getDay(),
+				hours = today.getHours(),
+				minutes= today.getMinutes(),
+				seconds = today.getSeconds(),
+				time = year + '年' + month + '月' + date + '日' + hours +　 '时'　+ minutes + '分' +　seconds + '秒';
+				console.log(time);
+
+		</script>
+	</body>
+</html>

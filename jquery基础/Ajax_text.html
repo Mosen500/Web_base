@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<mata charset="utf-8"/>
+		<title>Ajax加载文本</title>
+		<script src="jquery-3.2.1/jquery-3.2.1.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="divtext">
+			<div class="title">
+				<span class="f1">加载一段文字</span>
+				<span class="fr">
+					<input id="btnShow" type="button" value="加载"/>
+				</span>
+			</div>
+			<ul></ul>
+
+		</div>
+		<script type="text/javascript">
+		$(function() {
+			$("#btnShow").bind("click",function() {
+				var $this = $(this);
+				$.ajax({
+					url:"ajax.txt",
+					dataType:"text",
+					success:function(data) {
+						$this.attr("disabled","ture");
+						$("ul").append(data);
+					}
+				});
+			})
+		});
+		</script>
+	</body>
+</html>

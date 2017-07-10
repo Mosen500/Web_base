@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<mata charset="utf-8"/>
+		<title>Array数组</title>
+	</head>
+	<body>
+	<script type="text/javascript">
+		/*var colors = ["red","yellow","green"];
+		var num = [1,2,3,4]
+		//push方法在数组最后增加内容
+		colors.push("pick");
+		//pop删除数组最后一个元素.返回值是被删除的元素
+		s = colors.pop();
+		console.log(s); 
+		colors.pop();
+		//unshift在数组最前面增加内容方法
+		colors.unshift("blue");
+		//shift删除数组的第一个元素；返回被删除的元素
+		colors.shift()
+		l = num.shift();
+		console.log(l);
+		console.log(colors);
+		var nums = [2,4,5] ;
+		var words= ["right","left","top"]
+		var num = [1,2,3,4,5,6,7,9]
+		//把数组转变为字符串
+		var str_1 = words.join("-")
+		var str = nums.join();
+		console.log(str_1);
+		console.log(str);
+		console.log(typeof(str));
+		//reverse方法将数组的顺序颠倒
+		num.reverse();
+		console.log(num);
+		//sort排序
+
+		console.log(num.sort(function(a,b){
+			return b-a;
+		}))；
+		var arr_1 = ["a","b","c","d"];
+		var arr_2 = ["e","f","g","h"];
+		var arr_3;
+		//concat数组的合并
+		arr_3 = arr_1.concat(arr_2,[1,2,3,4]);
+		console.log(arr_3);
+		//slice数组的截取
+		//array(start,end)
+		var number = [9,8,7,6,5,4,3,2,1];
+		var newNumber = number.slice(2,4);
+		console.log(newNumber);*/
+		//拷贝数组的三种方法：
+		/*var a = [1,"no",6];
+		var b;
+		//方法一：
+		b = new Array();
+		for(var i = 0;i < a.length;i++) {
+			b.push(a[i]);
+		}
+		console.log(b);
+		//方法二：
+		b = [].concat(a);
+		console.log(b);
+		//方法三：
+		b = a.slice(0);
+		console.log(b);*/
+		/*var arr = [1, 3, 5 , 7, 9, 11, 13, 14];
+		
+		//var delArr = arr.splice(2,2);
+		//删除 splice(start,num(个数))
+		//数组的长度被改变
+		console.log(arr);
+		console.log(arr.length);
+		console.log(delArr);
+		//插入语法array（index（起始位置），num（删除的个数—），itemx（插入的内容）
+		 var innerArr = arr.splice(3,0,"m","n","h");
+		console.log(arr);
+		console.log(innerArr);*/
+		//替换splice(index(起始位置)，count（要删的项数)，itemx（替换的内容））
+		/*var arr = [1, 3, 5 , 7, 9, 11, 13, 14];
+		var replaceArr = arr.splice(1,2,"x","y","i");
+		console.log(arr);
+		console.log(replaceArr); */
+
+		/*var nums = [1, 7, 5, 7, 8, 1, 6, 9];
+		//未找到放回-1 indexOf（searchvalue（查找内容）index（起始位置）
+	 	var pos = nums.indexOf(7);
+		console.log(pos);*/
+		//封装一个ie9以下的查找函数
+		var nums = [1, 7, 5, 7, 8, 1, 6, 9];
+		function ArrayindexOf(arr,value){
+			for(i = 0; i < arr.length; i++){
+				if(arr[i] === value){
+					return i;
+				}			
+			}
+			return -1;
+		}
+		l = ArrayindexOf(nums,8);
+
+console.log(l);
+	</script>
+	</body>
+</html>
